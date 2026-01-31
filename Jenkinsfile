@@ -34,7 +34,7 @@ pipeline {
         stage('Checkout Code') {
             when { expression { params.ACTION == 'build' } }
             steps {
-                git branch: 'master',
+                git branch: 'main',
                     url: 'https://github.com/umachandrashekhar3939/SpringBootproject_using_Jenkins.git',
                     credentialsId: 'github-creds'
             }
