@@ -18,7 +18,7 @@ pipeline {
             description: 'Docker image tag'
         )
         string(
-            name: 'DOCKERHUB_USERNAME',
+            name: 'uma777',
             defaultValue: 'karthikan123',
             description: 'DockerHub username'
         )
@@ -35,7 +35,7 @@ pipeline {
             when { expression { params.ACTION == 'build' } }
             steps {
                 git branch: 'master',
-                    url: 'https://github.com/Ankarthik0011/SpringBoot_Project_deploy_using_Jenkins_Automation.git',
+                    url: 'https://github.com/umachandrashekhar3939/SpringBootproject_using_Jenkins.git',
                     credentialsId: 'github-creds'
             }
         }
@@ -52,7 +52,7 @@ pipeline {
             when { expression { params.ACTION == 'build' } }
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'dockerhub-3153',
+                    credentialsId: 'dockerhub-1234',
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
