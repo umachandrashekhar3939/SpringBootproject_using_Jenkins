@@ -18,7 +18,7 @@ pipeline {
             description: 'Docker image tag'
         )
         string(
-            name: 'uma777',
+            name: 'DOCKERHUB_USERNAME',
             defaultValue: 'uma777',
             description: 'DockerHub username'
         )
